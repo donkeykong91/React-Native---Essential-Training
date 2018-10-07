@@ -22,7 +22,9 @@ export default class App extends Component<Props> {
     console.log("Hello RN!");
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome>Hello World!</Text>
+        <Text style={[styles.welcome, {flex: 5}]}>Hello World1!</Text>
+        <Text style={[styles.welcome, {flex: 4}]}>Hello World2!</Text>
+        <Text style={[styles.welcome, {flex: 1}]}>Hello World3!</Text>
       </View>
     );
   }
@@ -31,13 +33,13 @@ export default class App extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    justifyContent: 'space-around',
+    // alignItems: 'center',
+    backgroundColor: 'orange',
   },
   welcome: {
     fontSize: 20,
-    textAlign: 'center',
+    // textAlign: 'center',
     margin: 10,
     backgroundColor: "rosybrown",
   },
